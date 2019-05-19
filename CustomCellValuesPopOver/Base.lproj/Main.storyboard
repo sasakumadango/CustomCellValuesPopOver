@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="anV-g1-zvt">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="4EL-id-Xxw">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QtN-r5-0xG" customClass="ViewController" customModule="CustomCellValuesPopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="npn-xc-kXt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xqC-KD-WpD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xdo-10-lm0" customClass="CustomTableViewCell" customModule="CustomCellValuesPopOver" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdo-10-lm0" id="oWK-1u-ats">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-jx-yPF">
+                                                    <rect key="frame" x="20" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKs-5n-Btc" customClass="CustomCellPopButton" customModule="CustomCellValuesPopOver" customModuleProvider="target">
+                                                    <rect key="frame" x="354" y="35" width="40" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Ce5-Ig-5J1"/>
+                                                    </constraints>
+                                                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title=" 0">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="tappedButton:" destination="QtN-r5-0xG" eventType="touchUpInside" id="Pc9-25-KNB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jKs-5n-Btc" firstAttribute="trailing" secondItem="oWK-1u-ats" secondAttribute="trailingMargin" id="DXU-qu-2W5"/>
+                                                <constraint firstItem="HQT-jx-yPF" firstAttribute="top" secondItem="oWK-1u-ats" secondAttribute="topMargin" constant="28" id="KQf-Lx-jre"/>
+                                                <constraint firstItem="jKs-5n-Btc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HQT-jx-yPF" secondAttribute="trailing" constant="8" symbolic="YES" id="Mjw-iT-aTG"/>
+                                                <constraint firstItem="HQT-jx-yPF" firstAttribute="leading" secondItem="oWK-1u-ats" secondAttribute="leadingMargin" id="S76-Lx-h8v"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jKs-5n-Btc" secondAttribute="bottom" constant="24" id="a5c-xf-jzO"/>
+                                                <constraint firstItem="jKs-5n-Btc" firstAttribute="top" secondItem="oWK-1u-ats" secondAttribute="topMargin" constant="24" id="iU8-II-5Nq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HQT-jx-yPF" secondAttribute="bottom" constant="29" id="t31-93-4LX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="customButton" destination="jKs-5n-Btc" id="1V4-K3-gWu"/>
+                                            <outlet property="customLavel" destination="HQT-jx-yPF" id="QQg-rM-A61"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QtN-r5-0xG" id="Mvl-Pl-F07"/>
+                                    <outlet property="delegate" destination="QtN-r5-0xG" id="xl0-Iw-o1D"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xqC-KD-WpD" firstAttribute="trailing" secondItem="vqn-3l-sSS" secondAttribute="trailing" id="4mt-7v-2z8"/>
+                            <constraint firstItem="xqC-KD-WpD" firstAttribute="top" secondItem="vqn-3l-sSS" secondAttribute="top" id="5w4-KW-6fm"/>
+                            <constraint firstItem="xqC-KD-WpD" firstAttribute="leading" secondItem="vqn-3l-sSS" secondAttribute="leading" id="GHz-OX-lNO"/>
+                            <constraint firstItem="xqC-KD-WpD" firstAttribute="bottom" secondItem="vqn-3l-sSS" secondAttribute="bottom" id="elT-ql-wpb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vqn-3l-sSS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="First View Controller" id="p5k-dI-tVF"/>
+                    <connections>
+                        <outlet property="tableView" destination="xqC-KD-WpD" id="HLf-Ra-1mH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjf-m9-lE5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bSk-JS-2jx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="anV-g1-zvt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G5q-8W-gvf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QtN-r5-0xG" kind="relationship" relationship="rootViewController" id="p2e-Rm-T9I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBu-Iy-zhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842.02898550724649" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
